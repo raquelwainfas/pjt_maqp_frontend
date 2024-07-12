@@ -2,7 +2,7 @@
 
 Este projeto é um site onde é possível cadastrar cães para adoção. Ele permite que os usuários adicionem informações sobre cães disponíveis para adoção e visualizem os cães cadastrados.
 
-Obs.: As fotos dos animais são meramente ilustrativas e fazem parte de uma requisição REST para uma API Externa [explicada neste documento]()
+Obs.: As fotos dos animais são meramente ilustrativas e fazem parte de uma requisição REST para uma API Externa [explicada neste documento](https://github.com/raquelwainfas/pjt_maqp_backend)
 
 ## Descrição
 
@@ -118,7 +118,7 @@ Interage com a aplicação através de um navegador web.
 3. **Camada de Aplicação** processa as requisições, interage com o banco de dados (se necessário) e retorna as respostas apropriadas
 4. **Camada de Dados** armazena e recupera dados conforme solicitado pela aplicação.
 5. **Infraestrutura Docker** garante que a aplicação e suas dependências rodem de forma consistente e isolada.
-6. **API Externa** a camada de aplicação é responsável por processar a requisição para essa API. O endpoint utilizado: https://dog.ceo/api/breeds/image/random. Seu funcionamento e maiores detalhes são explicados [aqui]()
+6. **API Externa** a camada de aplicação é responsável por processar a requisição para essa API. O endpoint utilizado: https://dog.ceo/api/breeds/image/random. Seu funcionamento e maiores detalhes são explicados [aqui](https://github.com/raquelwainfas/pjt_maqp_backend)
 
 >Essa arquitetura modularizada ajuda a manter o código organizado, facilita a manutenção e possibilita a escalabilidade futura da aplicação.
 
