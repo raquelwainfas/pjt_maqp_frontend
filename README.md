@@ -75,7 +75,7 @@ docker stop <container_id_or_name>
 
 ## Arquitetura
 
-![Arquitetura](https://github.com/user-attachments/assets/922de921-c152-431d-b9ba-2edba9a248fe)
+![Arquitetura_fdbranco](https://github.com/user-attachments/assets/4c8036fe-9d99-44aa-a614-a071cf772917)
 
 ### Detalhamento dos Componentes
 
