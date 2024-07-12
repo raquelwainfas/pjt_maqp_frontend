@@ -1,5 +1,5 @@
 ![twitter_header_1500x500](https://github.com/user-attachments/assets/95aa6c44-13b4-410d-a3fd-cc0a566da9f0)
-
+## FRONT-END
 Este projeto é um site onde é possível cadastrar cães para adoção. Ele permite que os usuários adicionem informações sobre cães disponíveis para adoção e visualizem os cães cadastrados.
 
 Obs.: As fotos dos animais são meramente ilustrativas e fazem parte de uma requisição REST para uma API Externa [explicada neste documento](https://github.com/raquelwainfas/pjt_maqp_backend)
