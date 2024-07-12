@@ -37,9 +37,9 @@ docker build -t frontend:1.0 .
 ```
 3. **Execute o contêiner Docker:**
 
-Depois que a imagem for construída, execute o seguinte comando para iniciar o contêiner:
+Depois que a imagem for construída, será informado o ID da imagem. Execute o seguinte comando para iniciar o contêiner:
 ```sh
-docker run --rm -d -p 80:80 frontend
+docker run --rm -d -p 80:80 <id da imagem>
 ```
 
 Este comando irá executar o contêiner em segundo plano (-d) e mapear a porta 80 do contêiner para a porta 80 do host, tornando o site acessível em `http://localhost`
