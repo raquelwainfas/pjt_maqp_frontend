@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu amigo de quatro patas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="./images/logo-favicon.svg"/>
+</head>
+<body>
+    <header class="text-center my-4">
+        <img src="./images/twitter_header_1500x500.png" alt="Logo" class="img-fluid">
+    </header>
+
+    <!-- Botões de ação -->
+    <div class="button-container">
+        <button type="button" id="toggle-form" class="btn btn-outline-success btn-lg btn-custom" data-toggle="modal" data-target="#inserirPetModal">CADASTRAR PET PARA ADOÇÃO</button>
+    </div>
+    <div class="button-container">
+        <button type="button" id="toggle-table" class="btn btn-outline-success btn-lg btn-custom">CONHEÇA NOSSOS AUMIGOS</button>
+    </div>
+        
+    <!-- Início Modal - CADASTRAR PET -->
+    <div class="modal fade" id="inserirPetModal" tabindex="-1" role="dialog" aria-labelledby="inserirPetModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="inserirPetModalLabel">Cadastro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="create-form">
+                        <div class="form-group">
+                            <label for="create-name">Nome:</label>
+                            <input type="text" id="create-name" required class="form-control">
+                            <label for="create-age">Idade:</label>
+                            <input type="text" id="create-age" required class="form-control">
+                            <label for="create-sex">Sexo:</label>
+                            <div class="radio-group">
+                                <input type="radio" id="create-sex-f" name="gender" value="F" required>
+                                <label for="create-sex-f">Feminino</label>
+                                <input type="radio" id="create-sex-m" name="gender" value="M" required>
+                                <label for="create-sex-m">Masculino</label>
+                            </div>
+                            <label for="create-size">Porte:</label>
+                            <select id="create-size" name="size" class="form-control" required>
+                                <option value="">Selecione o porte</option>
+                                <option value="pequeno">Pequeno</option>
+                                <option value="medio">Médio</option>
+                                <option value="grande">Grande</option>
+                            </select>
+                            <label for="create-personality">Personalidade:</label>
+                            <input type="text" id="create-personality" class="form-control">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-success">Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Modal - CADASTRAR PET -->
+
+    <!-- Início estrutura tabela com os pets cadastrados-->
+    <div id="show-table" class="container" style="display: none;">
+        <table id="animais-table" class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Sexo</th>
+                    <th>Porte</th>
+                    <th>Personalidade</th>
+                    <th>Imagem</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <!-- Fim estrutura tabela com os pets cadastrados-->
+
+    <!-- Início Modal - ATUALIZAR PET -->
+    <div class="modal fade" id="atualizarPetModal" tabindex="-1" role="dialog" aria-labelledby="atualizarPetModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="atualizarPetModalLabel">Atualização de Dados</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="update-form">
+                        <div class="form-group">
+                            <input type="hidden" id="update-id">
+                            <label for="update-name">Nome:</label>
+                            <input type="text" id="update-name" required class="form-control">
+                            <label for="update-age">Idade:</label>
+                            <input type="text" id="update-age" required class="form-control">
+                            <label for="update-sex">Sexo:</label>
+                            <div class="radio-group">
+                                <input type="radio" id="update-sex-f" name="update-gender" value="F" required>
+                                <label for="update-sex-f">Feminino</label>
+                                <input type="radio" id="update-sex-m" name="update-gender" value="M" required>
+                                <label for="update-sex-m">Masculino</label>
+                            </div>
+                            <label for="update-size">Porte:</label>
+                            <select id="update-size" name="size" class="form-control" required>
+                                <option value="">Selecione o porte</option>
+                                <option value="pequeno">Pequeno</option>
+                                <option value="medio">Médio</option>
+                                <option value="grande">Grande</option>
+                            </select>
+                            <label for="update-personality">Personalidade:</label>
+                            <input type="text" id="update-personality" class="form-control">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-success">Atualizar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Modal - ATUALIZAR PET -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
